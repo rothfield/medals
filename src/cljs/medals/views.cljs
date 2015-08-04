@@ -1,11 +1,7 @@
 (ns medals.views
   (:require 
     [reagent.core :as reagent]
-    [re-frame.core :refer [register-handler
-                           path
-                           register-sub
-                           dispatch
-                           dispatch-sync
+    [re-frame.core :refer [ dispatch
                            subscribe]]
     ))
 
@@ -16,17 +12,17 @@
 
 (defn error-div[]
   (let [ ajax-error? (subscribe [:ajax-error?]) ]
-   (if @ajax-error?
-     [:div.error
-      "A server error occurred"]
-     [:div]
-  )))
+    (if @ajax-error?
+      [:div.error
+       "A server error occurred"]
+      [:div]
+      )))
 
 (defn header[]
   [:div.header.headerSilverColor
    "MEDAL COUNT"
    ]
-  
+
   )
 (defn medal-class-sort-control[ { sort-medals-by :sort-medals-by ;; a ref
                                  medal-class :medal-class  ;; a symbol
@@ -108,9 +104,8 @@
 
 (defn medal-count-table[]
   (let [ medals-data (subscribe [:medals-data])
-        maximum-countries-to-show (subscribe [:maximum-countries-to-show])
-       ;; (subscribe [:maximum-countries-to-show])
-        row-count (min @maximum-countries-to-show (count @medals-data))
+         maximum-countries-to-show (subscribe [:maximum-countries-to-show])
+         row-count (min @maximum-countries-to-show (count @medals-data))
         ]
     [:div.medalCountTable
      [header]

@@ -2,7 +2,7 @@ Medal Count
 -----------
 
 This project implements the Medal Count Module described below.
- 
+    
 This is a Clojurescript/Reagent/Reframe project. It doesn't provide a web server.
 
 Testing

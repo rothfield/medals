@@ -1,0 +1,53 @@
+<h2>Medal Count Module</h2>
+<p>This Module shows up to 10 countries that have won the most  medals of a given kind in the Olympics games.  It has the  following requirements:
+-It can accept up to two parameters: </p>
+<ul>
+<li>element_id - an id of the element that the module will use  as its  container. </li>
+<li>sort -­‐ determines the type of medals to sort by. It can have 
+one of the  following values: 'total', 'gold', 'silver' and 
+'bronze'. </li>
+</ul>
+<p>-If no sort parameter is passed the sort should be by gold 
+medals.</p>
+<p>-When ranking by total medals, ties are broken by most 
+gold.</p>
+<p>-When ranking by gold, ties are broken by most silver. 
+-When ranking by silver, ties are broken by most gold. 
+-When ranking by bronze, ties are broken by most gold. </p>
+<p>-Users can click the column headers to re-­‐sort the 
+countries by gold, silver,  bronze, or total medals won. 
+With each sort the possibility exists that new  countries 
+will enter and depart the top 10. </p>
+<p>-Please follow the design shown in the screenshots on the 
+following pages. </p>
+<p>-A sprite with the 13 countries flags (in alphabetical order 
+according to their country code) can be found here: 
+https://s3-­‐us-­‐west-­‐2.amazonaws.com/reuters.medals-­‐
+widget/flags.png </p>
+<p>-To get the list of countries and their medals use the 
+following URL: https://s3-­‐us-­‐west-­‐
+2.amazonaws.com/reuters.medals-­‐widget/medals.json </p>
+<p>Note that this should be loaded dynamically using an Ajax 
+call (simulate a call to a live API endpoint). Give an 
+appropriate error message if there was an error 
+retrieving the JSON data (if in real production scenario 
+the API is down, you can simulate that by running the 
+widget but turning off your wifi/internet connection). 
+Also note that although this is hosted on S3, a CORS file 
+was set on this folder and thus this data can be retrieved 
+with a regular Ajax request (no need for JSONP). 
+You can use whatever frameworks, templates or other libraries  you want. Please explain briefly why you chose them.  Your  code can live on a server or emailed back as a zip file 
+containing all the assets needed (html, css, js). If you use a zip 
+zip file please email it to: talgiat@gmail.com.</p>
+<p>Medal count table sorted by total gold 
+Notice that the tiebreak between Netherlands and Germany is 
+handled by total silver. </p>
+<p>Medal count table sorted by total medals 
+Notice that the tiebreak between France and Sweden is 
+handled by the total gold. </p>
+<p>Medal count table sorted by total silver 
+Notice that the tiebreak between USA, Netherlands and 
+Sweden is handled by the total gold. </p>
+<p>Medal count table sorted by total bronze 
+Notice that the tiebreak between Russia and Netherlands is 
+handled by total gold </p>

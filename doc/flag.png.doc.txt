@@ -1,0 +1,17 @@
+;  /* flag.png  order:
+;
+;   * IOC Code Country Name 
+;   * ____________________
+;   * AUT  Austria 
+;   * BLR  Belarus 
+;   * CAN  Canada  
+;   * CHN  China
+;   * FRA  France
+;   * GER  Germany
+;   * ITA  Italy
+;   * NED  Netherlands
+;   * NOR  Norway
+;   * RUS  Russia
+;   * SWE  Sweden
+;   * SUI  Switzerland
+;   * USA  United States

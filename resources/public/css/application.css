@@ -1,0 +1,154 @@
+.medalCountTable {
+		width:351px;
+		padding: 10px;
+		display:inline-block;
+		color: #919394; /* silver */
+		font-size:17px;
+		font-family: arial;
+		font-weight:bold;
+}
+
+.medalCountTable div.sortControls {
+		height:30px;
+		border-bottom: 3px solid silver;
+		margin-bottom: 5px;
+}
+.medalCountTable .* {
+}
+.clearFix {
+		clear:both;
+}
+
+.medalCountTable .header {
+		width:331px;
+		height:20px;
+		font-size:21px;
+		font-weight: normal;
+		margin-bottom:10px;
+}
+.medalCountTable .countryRow  {
+		height: 25px;
+		margin-bottom:5px;
+		border-bottom: 1px solid silver;
+}
+.medalCountTable .countryRow div {
+		float: left;
+		height:29px;
+}
+.medalCountTable .sortControls div {
+		float: left;
+		height:32px;
+}
+
+.medalCountTable .colId {
+		width:19px;
+}
+
+.medalCountTable .colFlag {
+		margin-left: 10px;
+		margin-right:10px;
+		text-align: center;
+		width:40px;
+}
+.medalCountTable .colCountryCode {
+		width:108px;
+}
+.medalCountTable .colMedalClass
+{
+		text-align: center;
+		width:36px;
+}
+
+.currentSort {
+	border-top: 3px solid #808080;
+	margin-top: -3px;
+}
+.medalCountTable .colTotal {
+		color: #646464;
+		text-align: center;
+		width:50px;
+}
+
+div.colTotal.currentSort {
+		margin-top: -1px;
+}
+.medalCountTable .sortControls .colTotal div {
+		text-align: center;
+		margin-top: 2px;
+		float: none;
+		display: inline-block;
+}
+
+.medalCountTable .sortControls .circle {
+		margin-top: 5px;
+		float: none;
+		display: inline-block;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px; 
+		/* width and height can be anything, as long as they're equal */
+}
+.gold.circle {
+		/*		background-color: #fad033; */
+		background-color: #fad033;
+}
+.silver.circle {
+		background-color: #9aa6ad;
+}
+.bronze.circle {
+		background-color: #875124;
+}
+.medalCountTable .countryRow div.flag {
+		height: 17px;
+}
+.flag {
+		float: left;
+		margin-left:0px;
+		padding-right:10px;
+		width: 18px;
+		height: 16px;
+		margin-bottom: 10px;
+		background: url('flags.png'); 
+		display:inline-block;
+
+}
+.ioc_code_AUT {
+		background-position:0px 0px;
+}
+.ioc_code_BLR {
+		background-position: 0px -17px;
+}
+.ioc_code_CAN {
+		background-position: 0px -34px;
+}
+.ioc_code_CHN {
+		background-position: 0px -51px;
+}
+.ioc_code_FRA {
+		background-position: 0px -68px;
+}
+.ioc_code_GER {
+		background-position: 0px -85px;
+}
+.ioc_code_ITA {
+		background-position: 0px -101px;
+}
+.ioc_code_NED {
+		background-position: 0px -119px;
+}
+.ioc_code_NOR {
+		background-position: 0px -136px;
+}
+.ioc_code_RUS {
+		background-position:0px -152px;
+}
+.ioc_code_SWE {
+		background-position: 0px -169px;
+}
+.ioc_code_SUI {
+		background-position: 0px -187px;
+}
+.ioc_code_USA {
+		background-position: 0px -203px;
+}
+

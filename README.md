@@ -1,14 +1,39 @@
-Medal Count
------------
+Usage:
+-----
+
+(assuming you are running the app on port 8000)
+
+http://localhost:8000/?load-medals-url=medals.json
+
+or
+ http://localhost:8000
+
+root directory is resources/public
+
+I added a load-medals-url parameter. If present, the app uses the URL.
+Otherwise it uses medals.json which is stored locally under 
+resources/public/medals.json
+
+The original URL on amazon seems to be down.
+
+
+Medal Count Task
+----------------
 
 This project implements the Medal Count Module described below.
     
 This is a Clojurescript/Reagent/Reframe project. It doesn't provide a web server.
 
+My Choices of Tools/Frameworks
+------------------------
+
+I chose to use Clojurescript, Reagent, and re-frame for my front-end framework. I've used this combination in a previous project (http://github.com/rothfield/doremi-script). I really like the ease of use of Reagent compared to Om. I like how re-frame structures the reagent app through the use of message passing and how the views and handlers are decoupled. I also like re-frames approach to global state (keeping all state in a single db object.
+
 Testing
 -------
 
-The integration tests are written in casperjs. Run them as follows:
+The integration tests are written in casperjs (in javascript)
+. Run them as follows:
 
 cd test/integration
 ./run_tests.sh

@@ -9,19 +9,38 @@
     [medals.subscriptions]
     ))
 
+(defn remove-trailing-forward-slash[x]
+  ;; browsers are adding a forward slash to url parameters
+  (if (nil? x)
+    x
+    (if (= "/" (last x))
+      (.substring x 0 (dec (count x)))
+      x)))
+
 (defn medal-count-main
   ([dom-id] (medal-count-main dom-id :gold))
   ([dom-id sort-medals-by]
-   (re-frame/dispatch-sync [:initialize 
-                   (merge
-                     initial-state
-                     { :sort-medals-by (keyword sort-medals-by)}) 
-                   ])
-   (re-frame/dispatch [:load-medals])
-   (reagent.core/render-component 
-     [medal-count-table]
-     (by-id dom-id))
-   ))
+   (let [load-medals-url 
+         (remove-trailing-forward-slash (.getParameterValue
+                                          (new goog/Uri (.-href (.-location js/window)))
+                                          "load-medals-url"))
+         extra-merge (if load-medals-url 
+                       {:load-medals-url load-medals-url}
+                       {})
+         ]
+     (re-frame/dispatch-sync 
+       [:initialize 
+        (merge
+          initial-state
+          { :sort-medals-by (keyword sort-medals-by)}
+          extra-merge
+          )
+        ])
+     (re-frame/dispatch [:load-medals])
+     (reagent.core/render-component 
+       [medal-count-table]
+       (by-id dom-id))
+     )))
 
 (defn ^:export init [] 
   (medal-count-main "container" "gold"))

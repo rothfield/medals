@@ -91,9 +91,9 @@
     [flag-icon code] 
     ]
    [:div.colCountryCode code]
-   [:div.colMedalClass gold]
-   [:div.colMedalClass silver]
-   [:div.colMedalClass bronze]
+   [:div.colMedalClass.colGold gold]
+   [:div.colMedalClass.colSilver silver]
+   [:div.colMedalClass.colBronze bronze]
    [:div.colTotal total]
    (if-not on-last-row?
      [:div.clearFix] 
@@ -104,8 +104,8 @@
 
 (defn medal-count-table[]
   (let [ medals-data (subscribe [:medals-data])
-         maximum-countries-to-show (subscribe [:maximum-countries-to-show])
-         row-count (min @maximum-countries-to-show (count @medals-data))
+        maximum-countries-to-show (subscribe [:maximum-countries-to-show])
+        row-count (min @maximum-countries-to-show (count @medals-data))
         ]
     [:div.medalCountTable
      [header]

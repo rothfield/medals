@@ -1,3 +1,10 @@
+
+
+
+As of Aug 5, 2015 this app is live at
+http://gene-tracker.com:8000
+
+
 Usage:
 -----
 
